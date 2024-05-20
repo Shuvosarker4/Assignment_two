@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
 import app from "./app";
+import dotenv from "dotenv";
+dotenv.config();
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/test");
+  await mongoose.connect(process.env.DB_URL as string);
 
-  const port = 3000;
+  const port = process.env.PORT;
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
   });
