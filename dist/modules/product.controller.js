@@ -13,7 +13,7 @@ exports.ProductController = void 0;
 const product_service_1 = require("./product.service");
 const createProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const productData = req.body;
-    console.log(productData);
+    //   console.log(productData);
     const result = yield product_service_1.ProductService.createProduct(productData);
     res.json({
         success: true,
@@ -21,6 +21,25 @@ const createProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         data: result,
     });
 });
+//get product
+const getAllProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const result = yield product_service_1.ProductService.getAllProduct();
+        res.json({
+            success: true,
+            message: "Product created successfully!",
+            data: result,
+        });
+    }
+    catch (err) {
+        res.status(500).json({
+            success: false,
+            message: "Could not fetch movies!",
+            error: err,
+        });
+    }
+});
 exports.ProductController = {
     createProduct,
+    getAllProduct,
 };

@@ -6,6 +6,12 @@ const createProduct = async (playLoad: TProduct) => {
   return result;
 };
 
+const getAllProduct = async () => {
+  const result = Product.find();
+  return result;
+};
+
 export const ProductService = {
   createProduct,
+  getAllProduct,
 };
