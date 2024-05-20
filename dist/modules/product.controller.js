@@ -13,7 +13,8 @@ exports.ProductController = void 0;
 const product_service_1 = require("./product.service");
 const createProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const productData = req.body;
-    const result = product_service_1.ProductService.createProduct(productData);
+    console.log(productData);
+    const result = yield product_service_1.ProductService.createProduct(productData);
     res.json({
         success: true,
         message: "Product created successfully!",

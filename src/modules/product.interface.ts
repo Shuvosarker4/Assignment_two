@@ -1,6 +1,10 @@
-export type TVariant = {
+export type TTypes = {
   type: string;
   value: string;
+};
+export type TVariant = {
+  type: TTypes;
+  value: TTypes;
 };
 
 export type TInventory = {
@@ -14,6 +18,6 @@ export type TProduct = {
   price: number;
   category: string;
   tags: string[];
-  variants: TVariant;
+  variants: TVariant[];
   inventory: TInventory;
 };
