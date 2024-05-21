@@ -50,7 +50,26 @@ const getAllOrder = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         });
     }
 });
+const getOrderDetails = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const { email } = req.query;
+    console.log(email);
+    //   try {
+    //     // const result = await OrderService.getAllOrder();
+    //     res.json({
+    //       success: true,
+    //       message: "Product created successfully!",
+    //       data: null,
+    //     });
+    //   } catch (err: any) {
+    //     res.status(500).json({
+    //       success: false,
+    //       message: "Could not fetch orders!",
+    //       error: err,
+    //     });
+    //   }
+});
 exports.OrderController = {
     orderCreate,
     getAllOrder,
+    getOrderDetails,
 };
