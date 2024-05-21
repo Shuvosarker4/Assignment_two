@@ -1,10 +1,6 @@
-export type TTypes = {
+export type TVariant = {
   type: string;
   value: string;
-};
-export type TVariant = {
-  type: TTypes;
-  value: TTypes;
 };
 
 export type TInventory = {
