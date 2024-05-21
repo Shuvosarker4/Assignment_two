@@ -15,6 +15,11 @@ const orderCreate = (playLoad) => __awaiter(void 0, void 0, void 0, function* ()
     const result = yield order_model_1.Order.create(playLoad);
     return result;
 });
+const getAllOrder = () => __awaiter(void 0, void 0, void 0, function* () {
+    const result = yield order_model_1.Order.find();
+    return result;
+});
 exports.OrderService = {
     orderCreate,
+    getAllOrder,
 };

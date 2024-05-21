@@ -39,7 +39,7 @@ const getAllProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     catch (err) {
         res.status(500).json({
             success: false,
-            message: "Could not fetch movies!",
+            message: "Could not fetch products!",
             error: err,
         });
     }

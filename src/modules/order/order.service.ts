@@ -6,6 +6,12 @@ const orderCreate = async (playLoad: TOrder) => {
   return result;
 };
 
+const getAllOrder = async () => {
+  const result = await Order.find();
+  return result;
+};
+
 export const OrderService = {
   orderCreate,
+  getAllOrder,
 };
